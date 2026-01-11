@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "serverswitcher",
+  "version": "${version}",
+  "name": "ServerSwitcher",
+  "description": "本模组是FurryAxw Server Group的专用前置组件。 它的主要作用是与服务器的代理端（Velocity）进行通讯，自动识别你当前运行的整合包版本，并将你无缝引导至正确的子服务器。",
+  "authors": [
+    "furryAxw"
+  ],
+  "contact": {
+    "homepage": ""
+  },
+  "license": "All-Rights-Reserved",
+  "icon": "assets/serverswitcher/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "top.furryaxw.serverswitcher.fabric.ClientSwitcherFabric"
+    ]
+  },
+  "mixins": [
+    "serverswitcher.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "minecraft": "~1.20.1",
+    "java": ">=17",
+    "architectury": ">=9.2.14",
+    "fabric-api": "*"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
