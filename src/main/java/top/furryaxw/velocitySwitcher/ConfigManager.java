@@ -54,8 +54,6 @@ public class ConfigManager {
 
             for (Map.Entry<Object, ? extends CommentedConfigurationNode> entry : rawMap.entrySet()) {
                 String key = entry.getKey().toString();
-                // 错误代码: entry.getValue().toString() -> 返回对象结构
-                // 修正代码: entry.getValue().getString() -> 返回配置的文本值
                 String value = entry.getValue().getString();
 
                 if (value != null) {
@@ -63,7 +61,7 @@ public class ConfigManager {
                 }
             }
 
-            logger.info("Loaded " + serverMapping.size() + " server mappings: " + serverMapping);
+            logger.info("Loaded configuration. Mappings: {}", serverMapping.size());
 
         } catch (IOException e) {
             logger.error("Failed to load configuration", e);
