@@ -1,0 +1,6 @@
+# VelocitySwitcher Configuration
+# 格式: "客户端发来的字符串": "Velocity中注册的服务器名称"
+servers:
+  lobby: "lobby"
+  survival: "survival"
+  creative: "creative"
