@@ -7,12 +7,6 @@ architectury {
     neoForge()
 }
 
-loom {
-    neoForge {
-        mixinConfig "serverswitcher.mixins.json"
-    }
-}
-
 configurations {
     common {
         canBeResolved = true
