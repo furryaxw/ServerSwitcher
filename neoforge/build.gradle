@@ -47,3 +47,11 @@ shadowJar {
 remapJar {
     input.set shadowJar.archiveFile
 }
+
+tasks.withType(Jar).configureEach {
+    manifest {
+        attributes([
+            'FMLModType': 'MOD'
+        ])
+    }
+}
