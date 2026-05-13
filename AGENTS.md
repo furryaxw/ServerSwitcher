@@ -27,10 +27,6 @@
 - Read-only at runtime — no save mechanism. Designed for modpack authors to pre-configure.
 - Default target: `lobby`.
 
-## Mod ID gotcha
-
-`ClientSwitcher.java` defines `MOD_ID = "clientswitcher"` but `fabric.mod.json` and `mods.toml` both use `"serverswitcher"`. The platform metadata wins at runtime, but code references to `MOD_ID` will show `clientswitcher` in logs.
-
 ## Dead code
 
 - `fabric/src/main/java/.../client/ServerswitcherFabricClient.java` — empty `onInitializeClient()`, NOT registered in `fabric.mod.json` entrypoints. Ignore it.
