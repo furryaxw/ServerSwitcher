@@ -12,7 +12,7 @@ public class ClientIntentionPacketMixin {
     /**
      * 拦截 ClientIntentionPacket 的构造参数 hostName。
      */
-    @ModifyVariable(method = "<init>(ILjava/lang/String;ILnet/minecraft/network/protocol/handshake/ClientIntent;)V", at = @At("HEAD"), argsOnly = true, ordinal = 1)
+    @ModifyVariable(method = "<init>(ILjava/lang/String;ILnet/minecraft/network/protocol/handshake/ClientIntent;)V", at = @At("HEAD"), argsOnly = true, ordinal = 0)
     private static String modifyHostName(String hostName) {
         String target = ConfigManager.getTargetServer();
         // 只有当配置了 target 且不为空时才追加
