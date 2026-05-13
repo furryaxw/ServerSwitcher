@@ -10,7 +10,7 @@
   "contact": {
     "homepage": ""
   },
-  "license": "All-Rights-Reserved",
+  "license": "MIT",
   "icon": "assets/serverswitcher/icon.png",
   "environment": "*",
   "entrypoints": {
