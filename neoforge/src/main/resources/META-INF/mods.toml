@@ -1,6 +1,5 @@
 modLoader = "javafml"
-loaderVersion = "[47,)"
-#issueTrackerURL = ""
+loaderVersion = "[4,)"
 license = "MIT"
 
 [[mods]]
@@ -11,25 +10,24 @@ authors = "furryAxw"
 description = '''
 本模组是FurryAxw Server Group的专用前置组件。 它的主要作用是与服务器的代理端（Velocity）进行通讯，自动识别你当前运行的整合包版本，并将你无缝引导至正确的子服务器。
 '''
-#logoFile = ""
 
 [[dependencies.serverswitcher]]
-modId = "forge"
-mandatory = true
-versionRange = "[47,)"
+modId = "neoforge"
+type = "required"
+versionRange = "[21.1,)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.serverswitcher]]
 modId = "minecraft"
-mandatory = true
-versionRange = "[1.20.1,)"
+type = "required"
+versionRange = "[1.21.1,)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.serverswitcher]]
 modId = "architectury"
-mandatory = true
-versionRange = "[9.2.14,)"
+type = "required"
+versionRange = "[13,)"
 ordering = "AFTER"
 side = "BOTH"

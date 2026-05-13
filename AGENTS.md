@@ -2,16 +2,17 @@
 
 ## Architecture
 
-- **This branch (`1.20.1`):** Client-side Minecraft mod using Architectury for Fabric + Forge (1.20.1).
+- **This branch (`1.21.1`):** Client-side Minecraft mod using Architectury for Fabric + NeoForge (1.21.1).
+- **`1.20.1` branch:** Older version with Forge instead of NeoForge (1.20.1).
 - **`velocity` branch:** Separate Gradle project — the Velocity proxy plugin. Different build system entirely.
-- Three subprojects matching Architectury conventions: `common/` (shared logic), `fabric/`, `forge/`.
+- Three subprojects matching Architectury conventions: `common/` (shared logic), `fabric/`, `neoforge/`.
 - Platform modules are thin entrypoints (~10 lines); all real code lives in `common/`.
 
 ## Build
 
-- Java 17, Mojang official mappings.
+- Java 21, Mojang official mappings.
 - Gradle wrapper JAR is **missing** from git. Generate it first: `gradle wrapper` (if Gradle is installed) or restore from a cached copy.
-- Commands: `./gradlew build`, `./gradlew :fabric:build`, `./gradlew :forge:build`.
+- Commands: `./gradlew build`, `./gradlew :fabric:build`, `./gradlew :neoforge:build`.
 - `gradle.properties` controls all versions and `enabled_platforms`.
 
 ## The core trick
@@ -38,6 +39,6 @@
 
 - No test suites exist. No CI/CD pipelines. No linting or static analysis config.
 
-## License discrepancy
+## License
 
-- `LICENSE` says MIT, README says MIT, but `fabric.mod.json` says `"All-Rights-Reserved"` and `mods.toml` says `"All Rights Reserved"`. Project owner intent overrides metadata — treat as MIT.
+- MIT.
