@@ -38,6 +38,6 @@
 
 - No test suites exist. No CI/CD pipelines. No linting or static analysis config.
 
-## License discrepancy
+## License
 
-- `LICENSE` says MIT, README says MIT, but `fabric.mod.json` says `"All-Rights-Reserved"` and `mods.toml` says `"All Rights Reserved"`. Project owner intent overrides metadata — treat as MIT.
+- MIT.
